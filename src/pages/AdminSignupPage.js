@@ -4,7 +4,7 @@ import Layout from '../components/Layout/Layout';
 
 const AdminSignupPage = () => {
   return (
-    <Layout>
+    <Layout isAdmin={false}>
       <AdminSignup />
     </Layout>
   );

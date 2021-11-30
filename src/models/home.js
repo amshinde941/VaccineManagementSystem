@@ -11,24 +11,66 @@ Sinovac-CoronaVac,
 const data = [
   {
     name: "PCMC Vaccine center",
-    Pfizer: 50,
-    COVISHIELD: 1500,
-    COVAXIN: 800,
+    vaccines: [
+      { name: "Pfizer", count: 50 },
+      { name: "COVISHIELD", count: 1500 },
+      { name: "COVAXIN", count: 800 },
+    ],
   },
   {
     name: "BMC Vaccine center",
-    Pfizer: 50,
-    COVISHIELD: 1500,
-    COVAXIN: 800,
-    Janssen: 100,
-    Moderna: 50,
+    vaccines: [
+      { name: "Pfizer", count: 50 },
+      { name: "COVISHIELD", count: 1500 },
+      { name: "COVAXIN", count: 800 },
+      { name: "Janssen", count: 100 },
+      { name: "Moderna", count: 50 },
+    ],
   },
   {
     name: "Lohgaon Vaccine center",
-    Pfizer: 50,
-    COVISHIELD: 1500,
-    COVAXIN: 800,
-    Sinopharm: 500,
+    vaccines: [
+      { name: "Pfizer", count: 50 },
+      { name: "COVISHIELD", count: 1500 },
+      { name: "COVAXIN", count: 800 },
+      { name: "Sinopharm", count: 500 },
+    ],
+  },
+  {
+    name: "Lohgaon Vaccine center",
+    vaccines: [
+      { name: "Pfizer", count: 50 },
+      { name: "COVISHIELD", count: 1500 },
+      { name: "COVAXIN", count: 800 },
+      { name: "Sinopharm", count: 500 },
+    ],
+  },
+  {
+    name: "Lohgaon Vaccine center",
+    vaccines: [
+      { name: "Pfizer", count: 50 },
+      { name: "COVISHIELD", count: 1500 },
+      { name: "COVAXIN", count: 800 },
+      { name: "Sinopharm", count: 500 },
+    ],
+  },
+  {
+    name: "Lohgaon Vaccine center",
+    vaccines: [
+      { name: "Pfizer", count: 50 },
+      { name: "COVISHIELD", count: 1500 },
+      { name: "COVAXIN", count: 800 },
+      { name: "Sinopharm", count: 500 },
+    ],
+  },
+  {
+    name: "Lohgaon Vaccine center",
+    vaccines: [
+      { name: "Pfizer", count: 50 },
+      { name: "COVISHIELD", count: 1500 },
+      { name: "COVAXIN", count: 800 },
+      { name: "Sinopharm", count: 500 },
+    ],
   },
 ];
 

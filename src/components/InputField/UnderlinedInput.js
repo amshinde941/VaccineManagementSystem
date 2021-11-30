@@ -1,4 +1,5 @@
 import React from "react";
+import "./Input.css";
 const UnderlinedInput = ({
   name,
   placeholder,
@@ -6,24 +7,42 @@ const UnderlinedInput = ({
   value,
   type,
   onChange,
+  checked,
   error,
   ...otherProps
 }) => {
   return (
     <div className="flex flex-col gap-y">
-      <p className="text-base font-bold text-gray-700 px-2 py-2">{label}</p>
+      {type !== "checkbox" ? (
+        <p className="text-base font-bold text-gray-700 px-2 ">{label}</p>
+      ) : null}
       <div className={``}>
-        <div className="Inputfield w-full">
-          <input
-            name={name}
-            value={value}
-            placeholder={placeholder}
-            onChange={onChange}
-            type={type}
-            {...otherProps}
-            className=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:shadow-lg px-2 w-full"
-          />
-        </div>
+        {type === "checkbox" ? (
+          <label class="container flex flex-row">
+            {label}
+            <input
+              name={name}
+              type={type}
+              value={value}
+              onChange={onChange}
+              checked={checked}
+              {...otherProps}
+            />
+            <span class="checkmark"></span>
+          </label>
+        ) : (
+          <div className="Inputfield w-full">
+            <input
+              name={name}
+              value={value}
+              placeholder={placeholder}
+              onChange={onChange}
+              type={type}
+              {...otherProps}
+              className=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:shadow-lg px-2 w-full"
+            />
+          </div>
+        )}
       </div>
       {error && (
         <div className={`flex items-center`}>
