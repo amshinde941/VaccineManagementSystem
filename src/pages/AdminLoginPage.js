@@ -1,10 +1,12 @@
 import React from "react";
 import AdminLogin from "../components/Login/AdminLogin";
+import Layout from '../components/Layout/Layout';
+
 const AdminLoginPage = () => {
   return (
-    <div>
+    <Layout>
       <AdminLogin />
-    </div>
+    </Layout>
   );
 };
 

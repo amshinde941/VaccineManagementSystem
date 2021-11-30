@@ -6,7 +6,7 @@ import UnderlinedInput from "../InputField/UnderlinedInput";
 const AdminSignup = () => {
   return (
     <div className="mx-auto max-w-7xl w-11/12">
-      <div className="mt-28 bg-gray-100 p-6 md:w-6/12 mx-auto">
+      <div className="mt-20 bg-gray-100 p-6 md:w-6/12 mx-auto">
         <p className="text-xl font-bold text-gray-600 text-center">Sign Up</p>
         <div className="mx-auto md:w-10/12 pb-6">
           <UnderlinedInput

@@ -1,11 +1,12 @@
 import React from "react";
 import AdminSignup from "../components/Login/AdminSignup";
+import Layout from '../components/Layout/Layout';
 
 const AdminSignupPage = () => {
   return (
-    <div>
+    <Layout>
       <AdminSignup />
-    </div>
+    </Layout>
   );
 };
 
