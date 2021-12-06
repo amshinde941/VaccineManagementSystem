@@ -1,45 +1,85 @@
 import React from "react";
-import Button from "../Button/Button";
-import Layout from "../Layout/Layout";
 
-const Home = ({ data }) => {
+const Home = ({ admins }) => {
   return (
     <div>
-      <div className="w-full flex justify-center">
-        <div className="flex flex-row mt-4 w-11/12 md:w-6/12 border border-gray-100 rounded-md">
-          <input
-            type="text"
-            placeholder="Enter Vaccination Center"
-            className="flex-1 px-3 py-3 rounded-l-md sm:w-96 rounded-r-md sm:rounded-r-none"
-          />
-          <button className="px-3 py-3 bg-blue-400 text-white rounded-r-md rounded-l-md sm:rounded-l-none">
-            Search
-          </button>
-        </div>
-      </div>
       <div
-        className="mt-6 overflow-y-scroll hide-scroll"
-        style={{ maxHeight: "75vh" }}
+        className="mt-2 overflow-y-scroll"
+        style={{ maxHeight: "70vh" }}
       >
-        {data.map((val) => {
+        {admins.map((val) => {
           return (
-            <div className="m-4 p-4 bg-gray-200 rounded-lg">
-              <p className="text-center text-lg font-semibold text-gray-600">
-                {val.name}
+            <div className="my-4 mr-2 p-4 bg-gray-200 rounded-lg">
+              <p className="text-center text-lg font-bold text-gray-600">
+                {val?.centername}
               </p>
-              <div className="flex flex-col md:flex-row gap-x-6 items-center justify-center mt-2">
-                {val.vaccines.map((vaccine) => {
-                  return (
-                    <p className="text-black font-bold">
-                      <span className="text-blue-400 font-bold">{vaccine.name}</span> : <span className="text-blue-600 font-bold">{vaccine.count}</span>
-                    </p>
-                  );
-                })}
+              <div className="flex flex-col md:flex-wrap gap-x-6 items-center justify-center mt-2">
+                {val?.pfiz ? (
+                  <p className="text-black font-bold">
+                    <span className="text-blue-400 font-bold">PFIZER</span> :{" "}
+                    <span className="text-blue-600 font-bold">
+                      {val.pfizcount}
+                    </span>
+                  </p>
+                ) : null}
+                {val?.covi ? (
+                  <p className="text-black font-bold">
+                    <span className="text-blue-400 font-bold">COVISHIELD</span>{" "}
+                    :{" "}
+                    <span className="text-blue-600 font-bold">
+                      {val.covicount}
+                    </span>
+                  </p>
+                ) : null}
+                {val?.cova ? (
+                  <p className="text-black font-bold">
+                    <span className="text-blue-400 font-bold">COVAXIN</span> :{" "}
+                    <span className="text-blue-600 font-bold">
+                      {val.covacount}
+                    </span>
+                  </p>
+                ) : null}
+                {val?.jans ? (
+                  <p className="text-black font-bold">
+                    <span className="text-blue-400 font-bold">JANSSEN</span> :{" "}
+                    <span className="text-blue-600 font-bold">
+                      {val.janscount}
+                    </span>
+                  </p>
+                ) : null}
+                {val?.mode ? (
+                  <p className="text-black font-bold">
+                    <span className="text-blue-400 font-bold">MODERNA</span> :{" "}
+                    <span className="text-blue-600 font-bold">
+                      {val.modecount}
+                    </span>
+                  </p>
+                ) : null}
+                {val?.sino ? (
+                  <p className="text-black font-bold">
+                    <span className="text-blue-400 font-bold">SINOPHARM</span> :{" "}
+                    <span className="text-blue-600 font-bold">
+                      {val.sinocount}
+                    </span>
+                  </p>
+                ) : null}
+                {val?.sico ? (
+                  <p className="text-black font-bold">
+                    <span className="text-blue-400 font-bold">
+                      SINOVAC-CORONAVAC
+                    </span>{" "}
+                    :{" "}
+                    <span className="text-blue-600 font-bold">
+                      {val.sicocount}
+                    </span>
+                  </p>
+                ) : null}
               </div>
             </div>
           );
         })}
       </div>
+      
     </div>
   );
 };

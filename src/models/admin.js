@@ -9,4 +9,16 @@ const data = {
   ],
 };
 
+{/*
+const total = [
+  { name: "Pfizer" },
+  { name: "COVISHIELD" },
+  { name: "Janssen" },
+  { name: "Moderna" },
+  { name: "Sinopharm" },
+  { name: "Sinovac-CoronaVac" },
+  { name: "COVAXIN" },
+];
+*/}
+
 export default data;

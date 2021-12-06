@@ -1,3 +1,4 @@
+import { useFormikContext } from "formik";
 import React from "react";
 import "./Input.css";
 const UnderlinedInput = ({
@@ -7,10 +8,9 @@ const UnderlinedInput = ({
   value,
   type,
   onChange,
-  checked,
-  error,
   ...otherProps
 }) => {
+  const { errors, touched } = useFormikContext();
   return (
     <div className="flex flex-col gap-y">
       {type !== "checkbox" ? (
@@ -25,7 +25,7 @@ const UnderlinedInput = ({
               type={type}
               value={value}
               onChange={onChange}
-              checked={checked}
+              checked={value}
               {...otherProps}
             />
             <span class="checkmark"></span>
@@ -44,9 +44,11 @@ const UnderlinedInput = ({
           </div>
         )}
       </div>
-      {error && (
+      {touched[name] && errors[name] && (
         <div className={`flex items-center`}>
-          <p className={`caption text-red-400 font-medium italic`}>{error}</p>
+          <p className={`caption text-red-400 font-medium italic`}>
+            {errors[name]}
+          </p>
         </div>
       )}
     </div>
