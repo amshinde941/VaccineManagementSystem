@@ -5,7 +5,7 @@ import UnderlinedInput from "../InputField/UnderlinedInput";
 import { useFormikContext } from "formik";
 
 const AdminSignup = ({ handleChange, handleBlur, handleSubmit }) => {
-  const { values, setValues } = useFormikContext();
+  const { values } = useFormikContext();
 
   return (
     <form
